@@ -77,11 +77,31 @@ li {
   list-style-type: none;
 }
 
+.read-more-button {
+  background: @dark-grey;
+  color: darken(@light-grey, 15%);
+  border: none;
+  outline: none;
+  height: 30px;
+  width: 120px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.1s ease-in;
+}
+.read-more-button:hover {
+  background: darken(@dark-grey, 5%);
+}
+.read-more-button:active {
+  background: lighten(@dark-grey, 5%);
+  transform: scale(0.95);
+}
+
+
 .header {
 
   .long-dark-line {
     width: 100%;
-    height: 35px;
+    height: 30px;
     .grey-text;
     background-color: @dark-blue;
     .flex;
@@ -91,9 +111,9 @@ li {
       width: auto;
       height: 100%;
       img {
-        height: 20px;
-        width: 20px;
-        filter: brightness(80%);
+        height: 18px;
+        width: 18px;
+        filter: brightness(70%);
       }
     }
 
@@ -103,8 +123,8 @@ li {
       height: 100%;
 
       img {
-        width: 16px;
-        height: 16px;
+        width: 14px;
+        height: 14px;
         filter: 
           brightness(80%);      
         }
@@ -113,7 +133,7 @@ li {
         .flex;
 
         .select {
-          font-size: 12px;
+          font-size: 11px;
           border: none;
           outline: none;
           background-color: transparent;
@@ -152,11 +172,11 @@ li {
 
       .sign-in {
         .flex;
-        font-size: 12px;
+        font-size: 11px;
         cursor: pointer;
 
         img {
-          margin: 0 10px;
+          margin-right: 10px;
         }
       }
     }
@@ -167,7 +187,9 @@ li {
     background-color: @blue;
     .flex;
     width: 100%;
-
+    .nav-and-info-inner {
+      width: 100%;
+    }
 
     .nav-line {
       .flex;
@@ -272,6 +294,35 @@ li {
   }
 }
 
+// an angle deco element
+.angle-invert {
+  position: absolute;
+  left: 29px;
+  top: 30px;
+  transform: rotate(180deg);
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 2px;
+    transform: rotate(-45deg);
+    transform-origin: left bottom;
+    background-color: @dark-grey;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 2px;
+    transform: rotate(45deg);
+    background-color: @dark-grey;
+    transform-origin: right bottom;
+  }
+}
+
+
 .main {
   width: 100%;
   background-color: @light-blue;
@@ -307,33 +358,6 @@ li {
             position: absolute;
             left: 22px;
             top: 18px;
-            &::before {
-              content: "";
-              position: absolute;
-              width: 7px;
-              height: 2px;
-              transform: rotate(-45deg);
-              transform-origin: left bottom;
-              background-color: @dark-grey;
-            }
-
-            &::after {
-              content: "";
-              position: absolute;
-              width: 7px;
-              height: 2px;
-              transform: rotate(45deg);
-              background-color: @dark-grey;
-              transform-origin: right bottom;
-            }
-          }
-
-          .angle-invert {
-            position: absolute;
-            left: 29px;
-            top: 30px;
-            transform: rotate(180deg);
-
             &::before {
               content: "";
               position: absolute;
@@ -455,6 +479,10 @@ li {
         display: flex;
         align-items: flex-end;
         cursor: pointer;
+        @media (min-width: 500px) {
+          height: 190px;
+
+        }
       }
       
       .img {
@@ -517,9 +545,10 @@ li {
             }
             .heart:hover {
               animation-name: heartbeat;
-              animation-iteration-count: infinite;
+              animation-iteration-count: 1;
               animation-duration: 0.5s;
-              animation-direction: alternate;
+              animation-direction: normal;
+              animation-fill-mode: forwards;
             }
 
             .red-heart {
@@ -544,7 +573,7 @@ li {
       .short-review {
         padding: 15px 25px;
         @media (max-width: 400px) {
-          padding: 5px 5px;          
+          padding: 8px 8px;          
         }
 
         h1 {
@@ -564,7 +593,7 @@ li {
       .author {
         padding: 15px 25px;
         @media (max-width: 400px) {
-          padding: 5px 5px;          
+          padding: 8px 8px;          
         }
         font-size: 16px;
         color: lighten(@dark-grey, 30%);
@@ -587,10 +616,10 @@ li {
 
           img {
             cursor: pointer;
-            transition: transform 0.5s ease;
           }
            img:hover {
              transform: scale(1.1) rotate(180deg);
+             transition: transform 0.5s ease;
            }
        
           h2 {
@@ -604,7 +633,6 @@ li {
             cursor: pointer;
             transform: scale(1.01);
           }
-
         }
       }
     }
@@ -630,24 +658,6 @@ li {
         padding:20px 0;
         font-size: 14px;
         line-height: 1.5;
-      }
-      .read-more-button {
-        background: @dark-grey;
-        color: darken(@light-grey, 15%);
-        border: none;
-        outline: none;
-        height: 30px;
-        width: 120px;
-        border-radius: 15px;
-        cursor: pointer;
-        transition: transform 0.1s ease-in;
-      }
-      .read-more-button:hover {
-        background: darken(@dark-grey, 5%);
-      }
-      .read-more-button:active {
-        background: lighten(@dark-grey, 5%);
-        transform: scale(0.95);
       }
     }
     .categories {
@@ -699,7 +709,7 @@ li {
       }
       .flickr-photo {
         width: 45%;
-        height: 190px;
+        height: 160px;
         background: url("img/paint.jpg") no-repeat;
         background-size: cover;
         margin: 0 10px 20px 0;
@@ -732,6 +742,266 @@ li {
     .copyright {
       width: 100%;
       text-align: center;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .container {
+    max-width: 800px;
+    @media (min-width: 900px) {
+      max-width: 850px;
+    }
+  }
+  .header {
+    .long-dark-line {
+      background-color: @black;
+        .social {
+        display: block;
+        width: auto;
+        height: auto;
+        .flex;
+        a {
+          margin-right: 5px;
+          .flex;
+          transition: transform, brightness 1s ease;
+        }
+        a:hover img {
+          transform: scale(1.2);
+          filter: brightness(80%);
+        }
+      }
+      .sign-in-block {
+        width: auto;
+        .flex;
+        .language {
+          order: 2;
+          margin: 0 0 0 10px;
+          padding: 0;
+          .select {
+            background-color: @black;
+            &:focus {
+              background-color: @black;
+            }
+            option {
+              background-color: @black;
+              &:hover {
+                background-color: @dark-grey; 
+              }
+            }
+          }
+        }
+        .sign-in {
+          padding-right: 10px;
+          height: 30%;
+          border-right: 1px solid @light-grey;
+        }
+      }
+    }
+
+    .nav-and-info {
+      height: 520px;
+      background: url("img/driving.jpg") no-repeat;
+      background-size: cover;
+      background-position: 0 -170px;
+      padding: 10px 0;
+      .nav-and-info-inner {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        align-content: space-between;
+        flex-wrap: wrap;
+      }
+      .nav-line {
+        width: 100%;
+        height: auto;
+          .hamburger {
+            order: 2;
+            width: auto;
+            .flex;
+            .hamburger-closed {
+              display: none;
+            }
+            .nav {
+              display: block;
+              width: auto;
+              .menu {
+                .flex;
+                font-size: 10px;
+                font-weight: bold;
+                letter-spacing: 2px;
+                a {
+                  .white-text;
+                  padding: 3px 0;
+                  &:focus {
+                    border-bottom: 2px solid rgb(255, 0, 0);
+                  }
+                }
+                li {
+                  .flex;
+                  padding: 0 5px;
+                  position: relative;
+                  .white-angle {
+                    width: 13px;
+                    height: 13px;
+                    position: relative;
+                    transition: transform 0.3s ease;
+                    margin-left: 5px;
+                    transform: scale(0.7);
+                  }
+                  &:hover .white-angle {
+                    transform: rotate(180deg) scale(0.7);
+                  }
+
+                  .angle-invert {
+                    top: 5px;
+                    left: 8px;
+                    
+                    &::before {
+                      background-color: @white;
+                      height: 1px;
+                      left: -2px;
+                    }
+                    &::after {
+                      background-color: @white;
+                      height: 1px;
+                    }
+                  }  
+                  &:hover .submenu {
+                    display: block;
+                  }
+                  .submenu {
+                    display: none;
+                    position: absolute;
+                    left: 5px;
+                    top: 10px;
+                    padding-top: 5px;
+                    font-size: 12px;
+                    li {
+                      padding: 3px 5px;
+                      width: 60px;
+                      &:last-child {
+                        border-bottom: 2px solid rgb(255, 0, 0);
+                      }
+                      &:hover {
+                        color: @light-grey;
+                      }
+
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .logo {
+            order: 1;
+            width: auto;
+            font-size: 18px;
+          }
+          .nav-right {
+            width: 40px;
+            order: 3;
+            position: relative;
+            margin-left: 20px;
+            .search {
+              position: absolute;
+              left: -30px;
+              display: block;
+              background: url("img/icons/search.png") no-repeat;
+              background-position: 2px 2px;
+              background-size: 14px 14px;
+              padding: 0 0 0 18px;
+              width: 16px;
+              height: 18px;
+              border: none;
+              outline: none;     
+              margin: 0 7px; 
+              transition: all 0.2s ease;        
+            }
+            .search:focus {
+              position: absolute;
+              top: 30px;
+              left: -80px;
+              width: 130px;
+              border-radius: 3px;
+              background-color: white;
+              background-image: url("img/icons/search-black.png");
+              background-repeat: no-repeat;
+            }
+            .favorite {
+              display: block;
+              padding: 0 7px;
+              border-left: 1px solid rgba(175, 175, 175, 0.836);
+              img {
+                width: 16px;
+                height: 15px;
+              }
+            }
+            .cart {
+              padding: 0 7px;
+              border-left: 1px solid rgba(175, 175, 175, 0.836);
+              img {
+                width: 15px;
+                height: 15px;
+              }
+            }
+          }
+      }
+      .blog-info-block {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        padding: 50px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        h2 {
+          color: @light-grey;
+          font-size: 18px;
+          letter-spacing: 2px;
+        }
+        h1 {
+          color: @white;
+          font-size: 35px;
+          letter-spacing: 2px;
+        }
+        .read-more-button {
+          color: @white;
+          background-color: @blue;
+          margin: 20px 0;
+        }
+        .bloger {
+          background: url("img/author.jpg") no-repeat;
+          background-size: cover;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          cursor: pointer;
+        }
+        .name-date {
+          color: @light-grey;
+          font-size: 13px;
+          padding: 10px 0;
+          h2 {
+            font-size: 15px;
+            color: @white;
+            padding: 5px 0;
+          }
+        }
+        .header-likes-and-comments {
+          color: @light-grey;
+          font-size: 11px;
+          img {
+            cursor: pointer;
+            width: 15px;
+            height: 14px;
+            margin: 0 10px;
+          }
+        }
+      }
     }
   }
 }
