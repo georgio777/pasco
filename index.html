@@ -150,20 +150,20 @@
         <div class="sort-blog">
           <div class="container">
             <ul class="sort" tabindex="0">
-              <li>Sort blog <span class="button-sort">
+              <li class="first-li">SORT BLOG:<span class="button-sort">
                 <span class="angle"></span><span class="angle-invert"></span></span>
                 <ul class="sub-sort">
-                  <li>PHOTOGRAPHY</li>
-                  <li>LIFESTYLE</li>
-                  <li>TRIP</li>
-                  <li>INSPIRATION</li>
+                  <li tabindex="0">PHOTOGRAPHY</li>
+                  <li tabindex="0">LIFESTYLE</li>
+                  <li tabindex="0">TRIP</li>
+                  <li tabindex="0">INSPIRATION</li>
                 </ul>
               </li>
             </ul>
           </div>
         </div>
         <!-- articles -->
-        <div class="container">
+        <div class="container main-container">
           <div class="articles-container">
             <div class="article article-column-both">
               <div class="img-preview-block long-article-grid" style="height: 200px;">
@@ -215,6 +215,7 @@
                 </div>
                 <div class="short-review one-row-grid-right grid-row-one">
                   <h1>Lorem ipsum dolor sit amet.</h1>
+                  <p class="hidden-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
                 <div class="author one-row-grid-right grid-row-two">
                   <div class="name-date">
@@ -244,6 +245,7 @@
                 </div>
                 <div class="short-review long-article-grid">
                   <h1>Lorem ipsum dolor sit amet.</h1>
+                  <p class="hidden-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
                 <div class="author long-article-grid">
                   <div class="name-date">
@@ -273,6 +275,7 @@
                 </div>
                 <div class="short-review long-article-grid">
                   <h1>Lorem ipsum dolor sit amet.</h1>
+                  <p class="hidden-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
                 <div class="author long-article-grid">
                   <div class="name-date">
@@ -321,6 +324,7 @@
                 </div>
                 <div class="short-review one-row-grid-right grid-row-one">
                   <h1>Lorem ipsum dolor sit amet.</h1>
+                  <p class="hidden-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
                 <div class="author one-row-grid-right grid-row-two">
                   <div class="name-date">
@@ -350,6 +354,7 @@
                 </div>
                 <div class="short-review one-row-grid-right grid-row-one">
                   <h1>Lorem ipsum dolor sit amet.</h1>
+                  <p class="hidden-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
                 <div class="author one-row-grid-right grid-row-two">
                   <div class="name-date">
@@ -396,7 +401,102 @@
                   </div>
                 </div>
               </div>
-          </div>         
+          </div>   
+          <div class="aside-block">
+            <div class="search-block">
+                <input type="search" id="kek" class="search1" placeholder="Search..">
+            </div>
+            <div class="categories">
+                <div class="logo">CATEGORIES</div>
+                <ul>
+                    <li><a href="">Photography</a>31</li>
+                    <li><a href="">Illustration</a>12</li>
+                    <li><a href="">Graphic Design</a>774</li>
+                    <li><a href="">Web Design</a>87</li>
+                    <li><a href="">Illustration</a>95</li>
+                    <li><a href="">Graphic Design</a>123</li>
+                </ul>
+            </div>
+            <div class="subscribe">
+                <div class="logo">
+                  SUBSCRIBE
+                </div>
+                <form action="post">
+                  <label for="name">Name</label>
+                    <input type="name" class="name input" placeholder="Peter The First" id="name">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="input email" id="email" placeholder="mail@mail.com">  
+                    <button type="send" class="send-button">SUBSCRIBE</button>  
+                </form>
+            </div>
+            <div class="or"></div>
+            <div class="social-enter">
+              <img src="img/icons/facebook1.png" alt="">
+              <img src="img/icons/twitter1.png" alt="">
+              <img src="img/icons/vk1.png" alt="">
+              <img src="img/icons/tumblr1.png" alt="">
+              <img src="img/icons/pinterest1.png" alt="">
+              <img src="img/icons/dribble1.png" alt="">
+            </div>
+            <div class="tabpost">
+              <div class="logo">TAB POST VIDGET</div>
+              <div class="radio-block">
+                  <div class="recent-block">
+                    <input type="radio" name="posts" id="recent" class="input" checked>
+                      <label class="label" for="recent">
+                        RECENT POSTS
+                      </label>      
+                  </div>
+                  <div class="popular-block">
+                      <input type="radio" name="posts" id="popular" class="input">
+                      <label class="label" for="popular">
+                          POPULAR POSTS
+                      </label>      
+                  </div>    
+              </div>
+              <div class="posts">
+                <div class="post">
+                  <img src="img/man1.jpg" class="man" alt="">
+                  <span class="post-text1">April 28, 2016 </span> 
+                  <img src="img/icons/comment-black.png" class="comentkek" alt="">
+                  <span class="post-text2">Lorem ipsum dolor sit amet</span>
+                </div>
+                <div class="post">
+                    <img src="img/man2.jpg" class="man" alt="">
+                    <span class="post-text1">April 28, 2016 </span> 
+                    <img src="img/icons/comment-black.png" class="comentkek" alt="">
+                    <span class="post-text2">Lorem ipsum dolor sit amet</span>
+                </div>
+                <div class="post">
+                      <img src="img/man3.jpg" class="man" alt="">
+                      <span class="post-text1">April 28, 2016 </span> 
+                      <img src="img/icons/comment-black.png" class="comentkek" alt="">
+                      <span class="post-text2">Lorem ipsum dolor sit amet</span>
+                </div>
+                <div class="post">
+                        <img src="img/man4.jpg" class="man" alt="">
+                        <span class="post-text1">April 28, 2016 </span> 
+                        <img src="img/icons/comment-black.png" class="comentkek" alt="">
+                        <span class="post-text2">Lorem ipsum dolor sit amet</span>
+                </div>
+              </div>
+            </div>
+            <div class="tags">
+                <div class="logo">TAGS</div>
+                <a href="">Photography</a>
+                <a href="">Youtube</a>
+                <a href="">Webdesign</a>
+                <a href="">Envato</a>
+                <a href="">Art</a>
+                <a href="">Themefotest</a>
+                <a href="">Illustration</a>
+                <a href="">Protodune</a>
+                <a href="">Pasco</a>
+                <a href="">Videohive</a>
+                <a href="">Codecanyon</a>
+                <a href="">Art</a>
+            </div>
+          </div>      
         </div>
       </main>
       
