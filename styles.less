@@ -330,7 +330,8 @@ li {
   width: 100%;
   background-color: @light-blue;
 
-  .aside-block {
+  .aside-block,
+  .more-button {
     display: none;
   }
 
@@ -476,7 +477,7 @@ li {
           grid-row-end: 3;  
         }
       }
-
+      
       .img-preview-block {
         .white-text;
         font-size: 16px;
@@ -661,6 +662,7 @@ li {
 }
 
 .footer {
+  background-color: darken(@dark-grey, 15%);
   .footer-inner-top {
     color: darken(@light-grey, 15%);
     background-color: darken(@dark-grey, 15%);
@@ -1100,9 +1102,15 @@ li {
       grid-row-start: 1;
       grid-row-end: 2;
       padding-top: 0px;
+      padding-bottom: 0px;
     }
     .article {
       padding: 0;
+
+      &:hover .activity {
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.137), rgba(0, 0, 0, 0.644));
+      }
+
       .img-preview-block {
         height: 100%;
       }
@@ -1126,6 +1134,10 @@ li {
         height: auto;
         padding: 5px 0px;
       }
+    }
+
+    #big-size {
+      min-height: 350px;
     }
 
     .main-container {
@@ -1427,6 +1439,151 @@ li {
           } 
         }
       }
+    }
+
+    .more-button {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      padding: 35px 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      a {
+        .flex;
+
+        &:hover .arrow-container {
+          animation-name: shaking;
+          animation-duration: 0.3s;
+          animation-iteration-count: 1;
+        }
+        @keyframes shaking {
+          0% {
+            transform: translateX(2px);
+          }
+          33% {
+            transform: translateX(-4px);
+          }
+          66% {
+            transform: translateX(3px);
+          }
+          100% {
+            transform: translateX(-1px);
+          }
+        }
+      }
+
+      .more {
+        color: @blue;
+        letter-spacing: 1px;
+        font-size: 16px;
+      }
+      .arrow-container {
+        margin-left: 10px;
+        width: 30px;
+        height: 30px;
+        background-color: @white;
+        border-radius: 50%;
+        box-shadow: 1px 1px 2px 0 grey;
+        cursor: pointer;
+        .flex;
+        justify-content: center;
+        .arrow {
+          width: 10px;
+          height: 2px;
+          background-color: @blue;
+          display: block;
+          position: relative;
+          transform: translateX(-1px);
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 8px;
+            height: 2px;
+            background-color: @blue;
+          }
+          &::before {
+            top: -2px;
+            transform: translateX(6px) rotate(45deg);
+          }
+          &::after {
+            bottom: -2px;
+            transform: translateX(6px) rotate(-45deg);
+          }
+        }
+      }
+    }
+
+  }
+
+  .footer {
+    .carousel {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+      height: 200px;
+      padding: 0px;
+      .gallery {
+        width: 100%;
+        overflow: hidden;
+        margin: 0px;
+        padding: 0px;
+        .images {
+          height: 200px;
+          width: 9999px;
+          list-style: none;
+          transition: margin-left 250ms;
+          font-size: 0;
+          li {
+            display: inline-block;
+            img {
+              width: 200px;
+              height:200px;
+              display: block;
+            }
+          }
+        }
+      }
+      .prev-container {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 40px;
+        height: 200px;
+        z-index: 1;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0.068), rgba(255, 255, 255, 0.514));
+        .flex;
+        justify-content: center;
+        &:hover {
+          background: linear-gradient(to left, rgba(255, 255, 255, 0.199), rgba(255, 255, 255, 0.637));
+        }
+        img {
+          width: 100%;
+          filter: blur(1px);
+        }
+      }
+      .next-container {
+        position: absolute;
+        width: 40px;
+        height: 200px;
+        right: 0px;
+        top: 0px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.068), rgba(255, 255, 255, 0.521));
+        .flex;
+        justify-content: center;
+        &:hover {
+          background: linear-gradient(to right, rgba(255, 255, 255, 0.199), rgba(255, 255, 255, 0.637));
+        }
+        img {
+          width: 100%;
+          filter: blur(1px);
+        }
+      }
+
     }
   }
 }

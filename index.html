@@ -166,7 +166,7 @@
         <div class="container main-container">
           <div class="articles-container">
             <div class="article article-column-both">
-              <div class="img-preview-block long-article-grid" style="height: 200px;">
+              <div class="img-preview-block long-article-grid" id="big-size" style="height: 200px;">
                 <!-- comments and likes -->
                 <div class="activity">
                   INSPIRATION
@@ -287,7 +287,7 @@
             </div>
             <!-- art 5 -->
             <div class="article article-column-both">
-              <div class="img-preview-block long-article-grid img-five" style="height: 200px;">
+              <div class="img-preview-block long-article-grid img-five" id="big-size" style="height: 200px;">
                   <!-- comments and likes -->
                 <div class="activity">
                     INSPIRATION
@@ -372,7 +372,7 @@
             </div>
             <!-- art 10 -->
             <div class="article article-column-both">
-                <div class="img-preview-block long-article-grid img-two" style="height: 200px;">
+                <div class="img-preview-block long-article-grid img-two" id="big-size" style="height: 200px;">
                   <!-- comments and likes -->
                   <div class="activity">
                     INSPIRATION
@@ -402,6 +402,7 @@
                 </div>
               </div>
           </div>   
+          <!-- ASIDE block -->
           <div class="aside-block">
             <div class="search-block">
                 <input type="search" id="kek" class="search1" placeholder="Search..">
@@ -496,11 +497,42 @@
                 <a href="">Codecanyon</a>
                 <a href="">Art</a>
             </div>
-          </div>      
+          </div> 
+          <div class="more-button">
+            <a href="">
+                <span class="more">More</span>
+                <div class="arrow-container"><span class="arrow"></span></div>    
+            </a>
+          </div>     
         </div>
       </main>
       
       <footer class="footer">
+        <!-- PC VISIBLE -->
+        <div class="carousel" id="carousel">
+          <div class="prev-container"><img src="img/icons/toleft.png" alt=""></div>
+          <div class="gallery">
+            <ul class="images">
+              <li class="images-li"><img src="img/slider/1.jpg" alt=""></li>
+              <li class="images-li"><img src="img/slider/2.jpg" alt=""></li>
+              <li class="images-li"><img src="img/slider/3.jfif" alt=""></li>
+              <li class="images-li"><img src="img/slider/4.jfif" alt=""></li>
+              <li class="images-li"><img src="img/slider/5.jpg" alt=""></li>
+              <li class="images-li"><img src="img/slider/6.jfif" alt=""></li>
+              <li class="images-li"><img src="img/slider/7.jpg" alt=""></li>
+              <li class="images-li"><img src="img/slider/8.jpg" alt=""></li>
+              <li class="images-li"><img src="img/slider/9.jpeg" alt=""></li>
+              <li class="images-li"><img src="img/slider/10.jpg" alt=""></li>
+              <li class="images-li"><img src="img/slider/11.jpg" alt=""></li>
+              <li class="images-li"><img src="img/slider/12.jpg" alt=""></li>
+              <li class="images-li"><img src="img/slider/13.jpg" alt=""></li>
+              <li class="images-li"><img src="img/slider/14.jpg" alt=""></li>
+              <li class="images-li"><img src="img/slider/15.jpg" alt=""></li>
+            </ul>
+          </div>
+          <div class="next-container"><img src="img/icons/right.png" alt=""></div>
+        </div>
+        <!-- PC VISIBLE END -->
         <div class="footer-inner-top">
           <div class="container">
             <div class="container-inner">
@@ -566,6 +598,7 @@
             </div>
           </div>
         </div>
+        <script src="carousel.js"></script>
       </footer>
     </body>
   </html>
