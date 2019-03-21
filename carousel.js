@@ -12,7 +12,7 @@ for (var i = 0; i < lis.length; i++) {
 
 // конфигурация 
 var width = 200; // ширина изображения
-var count = 3; // количество изображений
+var count = 1; // количество изображений
 
 var carousel = document.getElementById('carousel');
 var list = carousel.querySelector('ul');
@@ -30,6 +30,9 @@ carousel.querySelector('.prev-container').onclick = function() {
 carousel.querySelector('.next-container').onclick = function() {
   // сдвиг вправо
   // последнее передвижение вправо может быть не на 3, а на 2 или 1 элемент
+  console.log(position);
   position = Math.max(position - width * count, -width * (listElems.length - count));
+  console.log(position);
   list.style.marginLeft = position + 'px';
+  
 };

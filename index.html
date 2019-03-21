@@ -2,8 +2,10 @@
   <html>
     <head>
       <title>pasco</title>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
       <link href="styles.css" type="text/css" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
@@ -47,7 +49,8 @@
                         <ul class="menu">
                           <li>
                             <a href="">HOME</a>
-                            <div class="white-angle">                      <span class="angle-invert"></span>
+                            <div class="white-angle">                      
+                              <span class="angle-invert"></span>
                             </div>
                             <ul class="submenu">
                               <li>one</li>
@@ -57,7 +60,8 @@
                           </li>
                           <li>
                             <a href="">PORTFOLIO</a>
-                            <div class="white-angle">                      <span class="angle-invert"></span>
+                            <div class="white-angle">                      
+                              <span class="angle-invert"></span>
                             </div>
                             <ul class="submenu">
                               <li>one</li>
@@ -67,7 +71,8 @@
                           </li>
                           <li>
                             <a href="">BLOG</a>
-                            <div class="white-angle">                      <span class="angle-invert"></span>
+                            <div class="white-angle">                      
+                              <span class="angle-invert"></span>
                             </div>
                             <ul class="submenu">
                               <li>one</li>
@@ -77,7 +82,8 @@
                           </li>
                           <li>
                             <a href="">PAGES</a>
-                            <div class="white-angle">                      <span class="angle-invert"></span>
+                            <div class="white-angle">                      
+                              <span class="angle-invert"></span>
                             </div>
                             <ul class="submenu">
                               <li>one</li>
@@ -87,7 +93,8 @@
                           </li>
                           <li>
                             <a href="">SHOP</a>
-                            <div class="white-angle">                      <span class="angle-invert"></span>
+                            <div class="white-angle">                      
+                              <span class="angle-invert"></span>
                             </div>
                             <ul class="submenu">
                               <li>one</li>
@@ -97,7 +104,8 @@
                           </li>
                           <li>
                             <a href="">COMPONENTS</a>
-                            <div class="white-angle">                      <span class="angle-invert"></span>
+                            <div class="white-angle">                      
+                              <span class="angle-invert"></span>
                             </div>
                             <ul class="submenu">
                               <li>one</li>
@@ -107,7 +115,8 @@
                           </li>
                           <li>
                             <a href="">FEATURES</a>
-                            <div class="white-angle">                      <span class="angle-invert"></span>
+                            <div class="white-angle">                      
+                              <span class="angle-invert"></span>
                             </div>
                             <ul class="submenu">
                               <li>one</li>
@@ -365,7 +374,7 @@
                 </div>
             </div>
             <!-- art9 -->
-            <div class="article article-column-both">
+            <div class="article article-column-both"  id="video">
               <div class="long-article-grid">
                   <iframe  width="100%" height="300px" src="https://www.youtube.com/embed/JPx1c5HWScQ?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
@@ -510,27 +519,137 @@
       <footer class="footer">
         <!-- PC VISIBLE -->
         <div class="carousel" id="carousel">
-          <div class="prev-container"><img src="img/icons/toleft.png" alt=""></div>
           <div class="gallery">
-            <ul class="images">
-              <li class="images-li"><img src="img/slider/1.jpg" alt=""></li>
-              <li class="images-li"><img src="img/slider/2.jpg" alt=""></li>
-              <li class="images-li"><img src="img/slider/3.jfif" alt=""></li>
-              <li class="images-li"><img src="img/slider/4.jfif" alt=""></li>
-              <li class="images-li"><img src="img/slider/5.jpg" alt=""></li>
-              <li class="images-li"><img src="img/slider/6.jfif" alt=""></li>
-              <li class="images-li"><img src="img/slider/7.jpg" alt=""></li>
-              <li class="images-li"><img src="img/slider/8.jpg" alt=""></li>
-              <li class="images-li"><img src="img/slider/9.jpeg" alt=""></li>
-              <li class="images-li"><img src="img/slider/10.jpg" alt=""></li>
-              <li class="images-li"><img src="img/slider/11.jpg" alt=""></li>
-              <li class="images-li"><img src="img/slider/12.jpg" alt=""></li>
-              <li class="images-li"><img src="img/slider/13.jpg" alt=""></li>
-              <li class="images-li"><img src="img/slider/14.jpg" alt=""></li>
-              <li class="images-li"><img src="img/slider/15.jpg" alt=""></li>
-            </ul>
+            <div><img src="img/slider/1.jpg" alt=""></div>
+            <div><img src="img/slider/2.jpg" alt=""></div>
+            <div><img src="img/slider/3.jfif" alt=""></div>
+            <div><img src="img/slider/4.jfif" alt=""></div>
+            <div><img src="img/slider/5.jpg" alt=""></div>
+            <div><img src="img/slider/6.jfif" alt=""></div>
+            <div><img src="img/slider/7.jpg" alt=""></div>
+            <div><img src="img/slider/8.jpg" alt=""></div>
+            <div><img src="img/slider/9.jpeg" alt=""></div>
+            <div><img src="img/slider/10.jpg" alt=""></div>
+            <div><img src="img/slider/11.jpg" alt=""></div>
+            <div><img src="img/slider/12.jpg" alt=""></div>
+            <div><img src="img/slider/13.jpg" alt=""></div>
+            <div><img src="img/slider/14.jpg" alt=""></div>
+            <div><img src="img/slider/15.jpeg" alt=""></div>
           </div>
-          <div class="next-container"><img src="img/icons/right.png" alt=""></div>
+        </div>
+        <div class="another-subscribe-block">
+          <div class="container">
+            <div class="another-subscribe-block-inner">
+              <span>Subscribe to our newsletter</span>
+              <form action="post">
+                <input type="email" class="search1" name="" id="" placeholder="emai.@email.com">
+                <button type="submit">SUBSCRIBE</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="vidgets-and-newsletter">
+          <div class="container">
+            <div class="vidgets-inner">
+              <div class="pages-widget">
+                <h1 class="logo">PAGES WIDGET</h1>
+                <ul class="pages-ul border-template">
+                  HOME
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <ul class="pages-ul border-template">
+                  PAGES
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <ul class="pages-ul border-template">
+                  PORTFOLIO
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <ul class="pages-ul border-template">
+                  BLOG
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <ul class="pages-ul border-template">
+                  SHOP
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+              <div class="twitter-widget">
+                  <h1 class="logo">TWITTER WIDGET</h1>
+                  <div class="tweet">
+                    <div><img src="img/icons/twitter1.png" alt=""><span>@lorem ipsum dolor sit amet</span></div>
+                    
+                      <span>2 hours ago</span>
+                      <span>reply</span>
+                      <span>retweet</span>
+                      <span>favorite</span>
+                    
+                  </div>
+                  <div class="tweet">
+                    <div><img src="img/icons/twitter1.png" alt=""><span>@lorem ipsum dolor sit amet</span></div>
+                    
+                      <span>2 hours ago</span>
+                      <span>reply</span>
+                      <span>retweet</span>
+                      <span>favorite</span>
+                    
+                  </div>
+                  <div class="tweet">
+                    <div><img src="img/icons/twitter1.png" alt=""><span>@lorem ipsum dolor sit amet</span></div>
+                    
+                      <span>2 hours ago</span>
+                      <span>reply</span>
+                      <span>retweet</span>
+                      <span>favorite</span>
+                  
+                  </div>
+                  <div class="social-widget">
+                    <h1 class="logo">SOCIAL WIDGET</h1>
+                    <div class="social-enter">
+                        <img src="img/icons/facebook1.png" alt="">
+                        <img src="img/icons/twitter1.png" alt="">
+                        <img src="img/icons/vk1.png" alt="">
+                        <img src="img/icons/tumblr1.png" alt="">
+                        <img src="img/icons/pinterest1.png" alt="">
+                        <img src="img/icons/dribble1.png" alt="">
+                      </div>
+                  </div>
+              </div>
+              <div class="flickr-widget">
+                <h1 class="logo">FLICKR WIDGET</h1>
+                <div>
+                  <img src="img/slider/1.jpg" alt="">
+                  <img src="img/slider/1.jpg" alt="">
+                  <img src="img/slider/1.jpg" alt="img/slider/1.jpg">
+                  <img src="img/slider/1.jpg" alt="img/slider/1.jpg">
+                  <img src="img/slider/1.jpg" alt="img/slider/1.jpg">
+                  <img src="img/slider/1.jpg" alt="img/slider/1.jpg">
+                  <img src="img/slider/1.jpg" alt="img/slider/1.jpg">
+                  <img src="img/slider/1.jpg" alt="img/slider/1.jpg">
+                  <img src="img/slider/1.jpg" alt="img/slider/1.jpg">
+                </div>
+              </div>
+              <div class="newsletter">
+                  <h1 class="logo">NEWS LETTER</h1>
+                  <form action="">
+                    <input type="name" class="border-template" placeholder="Name">
+                    <input type="email" class="border-template" placeholder="enter email">
+                    <textarea type="text" class="border-template" placeholder="message" rows="5"></textarea>
+                    <button type="submit">SUBSCRIBE</button>
+                  </form>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- PC VISIBLE END -->
         <div class="footer-inner-top">
@@ -598,7 +717,45 @@
             </div>
           </div>
         </div>
-        <script src="carousel.js"></script>
+        <!-- <script src="carousel.js"></script> -->
+        <script type="text/javascript" src="slick/slick.js"></script>
+        <script>$('.gallery').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 7,
+            slidesToScroll: 4,
+            responsive: [
+            {
+              breakpoint: 1280,
+              settings: {
+                slidesToShow: 6,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 4,
+                  slidesToScroll: 3,
+                  infinite: true,
+                  dots: true
+                }
+              },
+              {
+                breakpoint: 800,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1
+                }
+              }
+              // You can unslick at a given breakpoint now by adding:
+              // settings: "unslick"
+              // instead of a settings object
+            ]
+          });</script>
       </footer>
     </body>
   </html>
