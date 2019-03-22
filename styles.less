@@ -328,7 +328,9 @@ li {
 
 .aside-block,
 .more-button,
-.carousel {
+.carousel,
+.vidgets-and-newsletter,
+.another-subscribe-block {
   display: none;
 }
 
@@ -1546,7 +1548,7 @@ li {
         margin: 0px;
         padding: 0px;
         position: relative;
-        height: 200px;
+        height: 100%;
         overflow: hidden;
 
         .slick-dots {
@@ -1631,8 +1633,7 @@ li {
         }
       }
     }
-    .footer-inner-top,
-    .footer-inner-bottom {
+    .footer-inner-top {
       display: none;
     }
     .another-subscribe-block {
@@ -1674,13 +1675,20 @@ li {
             font-size: 14px;
             padding: 5px 10px;
             margin: 0 10px;
+            &:hover {
+              background-color: lighten(@blue, 5%);              
+            }
+            &:active {
+              background-color: darken(@blue, 5%);  
+              transform: scale(0.9);            
+            }
           }
         }
       }
     }
     .vidgets-and-newsletter {
       width: 100%;
-      height: 500px;
+      height: 430px;
       .flex;
       .vidgets-inner {
         width: 100%;
@@ -1718,6 +1726,51 @@ li {
         }
         .pages-widget {
           .pages-ul {
+            padding: 0;
+            outline: none;
+            cursor: pointer;
+            .span-block {
+              padding: 5px 5px;
+              .flex;
+              .cross {
+                display: block;
+                width: 15px;
+                height: 2px;
+                background-color: grey;
+                position: relative;
+                &::before {
+                  content: "";
+                  display: block;
+                  width: 15px;
+                  height: 2px;
+                  background-color: grey;
+                  transform: rotate(90deg);
+                  transition: transform 0.3s ease;
+                }  
+              }
+            }
+            li {
+              transition: height 0.2s ease;
+              font-size: 0px;
+              padding: 0;
+              font-weight: normal;
+              height: 0px;
+              visibility: hidden;
+              &:hover {
+                background-color: @dark-grey;
+              }
+            }
+            &:focus li {
+              display: block;
+              border-top: 1px solid rgba(128, 128, 128, 0.514);
+              visibility: visible;
+              padding: 5px 5px;
+              font-size: 14px;
+              height: 25px;
+            }
+            &:focus .cross::before {
+              transform: rotate(0deg);              
+            }
           }
         }
         .twitter-widget {
@@ -1752,6 +1805,9 @@ li {
             }
           }
           .social-widget {
+            @media (min-width: 800px) and (max-width: 1024px) {
+              display: none;
+            }
             padding: 10px 0 0 0;
             .logo {
               padding: 5px 0;
@@ -1784,6 +1840,7 @@ li {
             }
             textarea {
               background-color: transparent;
+              outline: none;
             }
             button {
               border: none;
@@ -1793,9 +1850,23 @@ li {
               background-color: @dark-grey;
               color: @light-grey;
               padding: 7px 0;
+              cursor: pointer;
+              &:hover {
+                background-color: lighten(@dark-grey, 5%);              
+              }
+              &:active {
+                background-color: darken(@dark-grey, 5%);  
+                transform: scale(0.9);            
+              }  
             }
           }
         }
+      }
+    }
+    .footer-bottom-socials {
+      .social-bottom {
+        .flex;
+        justify-content: flex-end;
       }
     }
   }
