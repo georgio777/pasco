@@ -209,9 +209,11 @@ li {
         width: 30px;
         height: 30px;
         cursor: pointer;
+        position: relative;
 
         .nav {
           display: none;
+
         }
         // Closed menu
         .hamburger-closed {
@@ -228,6 +230,8 @@ li {
           width: 25px;
           height: 2px;
           background-color: @white;
+          transition: all 0.2s linear;
+
         }
         .hamburger-closed::before,
         .hamburger-closed::after {
@@ -247,6 +251,7 @@ li {
           left: 50%;
           top: 13px;
           transform: translateX(-50%);
+          transition: all 0.2s linear;
         }
 
         .hamburger-opend,
@@ -639,6 +644,36 @@ li {
         .name-date {
           .flex;
           width: 100%;
+          position: relative;
+
+          .context-menu {
+            position: absolute;
+            right: 30px;
+            bottom: 10px;
+            display: block;
+            ul {
+              list-style: none;
+              border: 1px solid @light-grey;
+              background-color: @white;
+              border-radius: 5px;
+              li {
+                padding: 5px;
+                font-size: 16px;
+                color: @dark-grey;
+                cursor: pointer;
+                &:hover {
+                  background-color: @light-grey;
+                }
+                &:first-child {
+                  border-bottom: 1px solid @light-grey;
+                }
+              }
+            }
+          }
+          .context-menu-closed {
+            display: none;
+          }
+
 
           img {
             cursor: pointer;
