@@ -79,7 +79,7 @@ li {
 
 .read-more-button {
   background: @dark-grey;
-  color: darken(@light-grey, 15%);
+  color: darken(@light-grey, 5%);
   border: none;
   outline: none;
   height: 30px;
@@ -89,7 +89,7 @@ li {
   transition: transform 0.1s ease-in;
 }
 .read-more-button:hover {
-  background: darken(@dark-grey, 5%);
+  background: darken(@dark-grey, 15%);
 }
 .read-more-button:active {
   background: lighten(@dark-grey, 5%);
@@ -986,6 +986,7 @@ li {
             }
           }
           .logo {
+            cursor: pointer;
             order: 1;
             width: auto;
             font-size: 18px;
@@ -1004,7 +1005,10 @@ li {
               border: none;
               outline: none;     
               margin: 0 7px; 
-              transition: all 0.2s ease;        
+              transition: all 0.2s ease;  
+              @media (max-width: 940px) {
+                display: none;
+              }      
             }
             .search:focus {
               width: 100px;
@@ -1056,6 +1060,9 @@ li {
           color: @white;
           background-color: @blue;
           margin: 20px 0;
+          &:hover{
+            background-color: darken(@blue,5%);
+          }
         }
         .bloger {
           background: url("img/author.jpg") no-repeat;
@@ -1281,6 +1288,7 @@ li {
         z-index: 11;
       }
       .logo {
+        cursor: pointer;
         font-weight: bold;
         color: @blue;
         letter-spacing: 1px;
